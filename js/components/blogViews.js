@@ -1,11 +1,12 @@
 import { getAllBlogs, getBlogBySlug } from "./blogData.js";
 
-const FALLBACK_IMAGE = "/assets/images/fallback/default.jpg";
+const FALLBACK_IMAGE = "assets/images/fallback/default.webp";
 
 function normalizeImagePath(path) {
   const value = String(path || "").trim();
   if (!value) return FALLBACK_IMAGE;
-  return value.startsWith("/") ? value : `/${value}`;
+  if (/^https?:\/\//i.test(value) || value.startsWith("data:")) return value;
+  return value.replace(/^\/+/, "");
 }
 
 function formatDate(value) {
@@ -19,6 +20,27 @@ function showFallback(node, text) {
   node.innerHTML = `<p class="lead">${text}</p>`;
 }
 
+function validateBlogImages(blog, slug) {
+  const resolved = {
+    hero: normalizeImagePath(blog?.image),
+    supporting: normalizeImagePath(blog?.supportingImage)
+  };
+
+  if (!String(blog?.image || "").trim()) {
+    console.warn(`[blog] missing "image" for slug "${slug}". Using fallback.`);
+  }
+  if (!String(blog?.supportingImage || "").trim()) {
+    console.warn(`[blog] missing "supportingImage" for slug "${slug}". Using fallback.`);
+  }
+
+  if (resolved.hero === resolved.supporting) {
+    console.warn(`[blog] hero and supporting images are identical for slug "${slug}". Using fallback for supporting image.`);
+    resolved.supporting = FALLBACK_IMAGE;
+  }
+
+  return resolved;
+}
+
 async function renderBlogList() {
   const grid = document.getElementById("blogGrid");
   if (!grid) return;
@@ -29,7 +51,7 @@ async function renderBlogList() {
         (blog) => `
         <article class="card project-card reveal blog-card">
           <figure class="project-thumb">
-            <img src="${normalizeImagePath(blog.image)}" alt="${blog.title || "Blog"} cover image" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${FALLBACK_IMAGE}';" />
+            <img src="${normalizeImagePath(blog.image)}" data-src="${normalizeImagePath(blog.image)}" alt="${blog.title || "Blog"} cover image" loading="lazy" decoding="async" onerror="console.warn('[blog] image failed to load:', this.dataset.src || this.src);this.onerror=null;this.src='${FALLBACK_IMAGE}';" />
           </figure>
           <p class="eyebrow">${blog.category || "Article"}</p>
           <h3>${blog.title || "Untitled"}</h3>
@@ -87,7 +109,7 @@ function setSupportingImage(id, src, alt) {
   if (!host) return;
   host.innerHTML = `
     <figure class="supporting-media">
-      <img src="${src}" alt="${alt}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${FALLBACK_IMAGE}';" />
+      <img src="${src}" data-src="${src}" alt="${alt}" loading="lazy" decoding="async" onerror="console.warn('[blog] supporting image failed to load:', this.dataset.src || this.src);this.onerror=null;this.src='${FALLBACK_IMAGE}';" />
     </figure>
   `;
 }
@@ -98,6 +120,7 @@ async function renderBlogPost() {
 
   const slug = new URLSearchParams(window.location.search).get("slug") || "";
   if (!slug) {
+    console.error("[blog] missing slug parameter in URL for blog-post page.");
     setText("blogPostTitle", "Article not found");
     setText("blogPostSubtitle", "No blog slug was provided.");
     return;
@@ -106,10 +129,12 @@ async function renderBlogPost() {
   try {
     const blog = await getBlogBySlug(slug);
     if (!blog) {
+      console.error(`[blog] no blog matched slug "${slug}".`);
       setText("blogPostTitle", "Article not found");
       setText("blogPostSubtitle", "The requested article does not exist.");
       return;
     }
+    const images = validateBlogImages(blog, slug);
 
     document.title = `Black | ${blog.title}`;
     const contentBlocks = Array.isArray(blog.content) ? blog.content : [];
@@ -131,17 +156,17 @@ async function renderBlogPost() {
 
     const heroMedia = document.getElementById("blogPostHeroMedia");
     if (heroMedia) {
-      const src = normalizeImagePath(blog.image);
+      const src = images.hero;
       preloadHeroImage(src);
       heroMedia.innerHTML = `
         <figure class="blog-hero-media">
-          <img src="${src}" alt="${blog.title || "Blog post"} hero image" decoding="async" fetchpriority="high" onerror="this.onerror=null;this.src='${FALLBACK_IMAGE}';" />
+          <img src="${src}" data-src="${src}" alt="${blog.title || "Blog post"} hero image" decoding="async" fetchpriority="high" onerror="console.warn('[blog] hero image failed to load:', this.dataset.src || this.src);this.onerror=null;this.src='${FALLBACK_IMAGE}';" />
         </figure>
       `;
     }
     setSupportingImage(
       "blogSupportingImage",
-      normalizeImagePath(blog.supportingImage),
+      images.supporting,
       `${blog.title || "Blog post"} supporting image`
     );
 
@@ -162,6 +187,7 @@ async function renderBlogPost() {
     setText("blogPullQuote", blog.pullQuote ? `"${blog.pullQuote}"` : "");
     setText("blogClosing", blog.closing);
   } catch (_error) {
+    console.error(`[blog] failed to render slug "${slug}".`, _error);
     setText("blogPostTitle", "Article unavailable");
     setText("blogPostSubtitle", "Unable to load content right now.");
   }

@@ -1,11 +1,12 @@
 import { getAllProjects, getFeaturedProjects, getProjectBySlug } from "./projectData.js";
 
-const FALLBACK_IMAGE = "/assets/images/fallback/default.jpg";
+const FALLBACK_IMAGE = "assets/images/fallback/default.webp";
 
 function normalizeImagePath(path) {
   const value = String(path || "").trim();
   if (!value) return FALLBACK_IMAGE;
-  return value.startsWith("/") ? value : `/${value}`;
+  if (/^https?:\/\//i.test(value) || value.startsWith("data:")) return value;
+  return value.replace(/^\/+/, "");
 }
 
 function projectImage(project) {
@@ -14,6 +15,47 @@ function projectImage(project) {
 
 function executionImage(project, key) {
   return normalizeImagePath(project?.[key]);
+}
+
+function validateProjectImages(project, slug) {
+  const resolved = {
+    hero: projectImage(project),
+    context: normalizeImagePath(project?.contextImage),
+    executionA: executionImage(project, "executionImageA"),
+    executionB: executionImage(project, "executionImageB")
+  };
+
+  if (!String(project?.image || "").trim()) {
+    console.warn(`[project] missing "image" for slug "${slug}". Using fallback.`);
+  }
+  if (!String(project?.contextImage || "").trim()) {
+    console.warn(`[project] missing "contextImage" for slug "${slug}". Using fallback.`);
+  }
+  if (!String(project?.executionImageA || "").trim()) {
+    console.warn(`[project] missing "executionImageA" for slug "${slug}". Using fallback.`);
+  }
+  if (!String(project?.executionImageB || "").trim()) {
+    console.warn(`[project] missing "executionImageB" for slug "${slug}". Using fallback.`);
+  }
+
+  const order = ["hero", "context", "executionA", "executionB"];
+  const seen = new Set();
+  for (const key of order) {
+    const value = resolved[key];
+    if (seen.has(value)) {
+      console.warn(`[project] duplicate image path "${value}" detected for slug "${slug}" on "${key}". Using fallback.`);
+      resolved[key] = FALLBACK_IMAGE;
+      continue;
+    }
+    seen.add(value);
+  }
+
+  if (resolved.executionA === resolved.executionB) {
+    console.warn(`[project] executionImageA and executionImageB are identical for slug "${slug}". Using fallback for image B.`);
+    resolved.executionB = FALLBACK_IMAGE;
+  }
+
+  return resolved;
 }
 
 function heroAlt(project) {
@@ -39,7 +81,7 @@ function makeProjectItemCard(project) {
   return `
     <article class="project-item project-card reveal" data-status="${String(project.status || "").toLowerCase()}">
       <figure class="project-thumb">
-        <img src="${image}" alt="${project.title || "Project"} preview image" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${FALLBACK_IMAGE}';" />
+        <img src="${image}" data-src="${image}" alt="${project.title || "Project"} preview image" loading="lazy" decoding="async" onerror="console.warn('[project] image failed to load:', this.dataset.src || this.src);this.onerror=null;this.src='${FALLBACK_IMAGE}';" />
       </figure>
       <span class="badge">${statusLabel(project.status)}</span>
       <h3>${project.title || "Untitled Project"}</h3>
@@ -54,7 +96,7 @@ function makeProjectFeatureCard(project) {
   return `
     <article class="card project-card reveal" data-status="${String(project.status || "").toLowerCase()}">
       <figure class="project-thumb">
-        <img src="${image}" alt="${project.title || "Project"} card image" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${FALLBACK_IMAGE}';" />
+        <img src="${image}" data-src="${image}" alt="${project.title || "Project"} card image" loading="lazy" decoding="async" onerror="console.warn('[project] image failed to load:', this.dataset.src || this.src);this.onerror=null;this.src='${FALLBACK_IMAGE}';" />
       </figure>
       <h3>${project.title || "Untitled Project"}</h3>
       <p>${project.excerpt || project.subtitle || ""}</p>
@@ -127,7 +169,7 @@ function setExecutionImage(id, src, alt) {
   if (!host) return;
   host.innerHTML = `
     <figure class="execution-media">
-      <img src="${src}" alt="${alt}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${FALLBACK_IMAGE}';" />
+      <img src="${src}" data-src="${src}" alt="${alt}" loading="lazy" decoding="async" onerror="console.warn('[project] execution image failed to load:', this.dataset.src || this.src);this.onerror=null;this.src='${FALLBACK_IMAGE}';" />
     </figure>
   `;
 }
@@ -137,7 +179,7 @@ function setContextImage(id, src, alt) {
   if (!host) return;
   host.innerHTML = `
     <figure class="context-media">
-      <img src="${src}" alt="${alt}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${FALLBACK_IMAGE}';" />
+      <img src="${src}" data-src="${src}" alt="${alt}" loading="lazy" decoding="async" onerror="console.warn('[project] context image failed to load:', this.dataset.src || this.src);this.onerror=null;this.src='${FALLBACK_IMAGE}';" />
     </figure>
   `;
 }
@@ -174,6 +216,7 @@ async function renderSingleProject() {
 
   const slug = new URLSearchParams(window.location.search).get("slug") || "";
   if (!slug) {
+    console.error("[project] missing slug parameter in URL for single-project page.");
     setText("projectTitle", "Project not found");
     setText("projectSubtitle", "No project slug was provided in the URL.");
     return;
@@ -182,10 +225,12 @@ async function renderSingleProject() {
   try {
     const project = await getProjectBySlug(slug);
     if (!project) {
+      console.error(`[project] no project matched slug "${slug}".`);
       setText("projectTitle", "Project not found");
       setText("projectSubtitle", "The requested project does not exist.");
       return;
     }
+    const images = validateProjectImages(project, slug);
 
     document.title = `Black | ${project.title}`;
 
@@ -196,11 +241,11 @@ async function renderSingleProject() {
 
     const heroMedia = document.getElementById("projectHeroMedia");
     if (heroMedia) {
-      const src = projectImage(project);
+      const src = images.hero;
       preloadHeroImage(src);
       heroMedia.innerHTML = `
         <figure class="project-hero-media">
-          <img src="${src}" alt="${heroAlt(project)}" decoding="async" fetchpriority="high" onerror="this.onerror=null;this.src='${FALLBACK_IMAGE}';" />
+          <img src="${src}" data-src="${src}" alt="${heroAlt(project)}" decoding="async" fetchpriority="high" onerror="console.warn('[project] hero image failed to load:', this.dataset.src || this.src);this.onerror=null;this.src='${FALLBACK_IMAGE}';" />
         </figure>
       `;
     }
@@ -209,7 +254,7 @@ async function renderSingleProject() {
     setText("projectBackground2", project.background?.[1] || "");
     setContextImage(
       "projectContextImage",
-      normalizeImagePath(project?.contextImage),
+      images.context,
       `${project.title || "Project"} context image`
     );
 
@@ -235,12 +280,8 @@ async function renderSingleProject() {
 
     setText("projectExecution1", project.execution?.[0] || "");
     setText("projectExecution2", project.execution?.[1] || "");
-    const executionA = executionImage(project, "executionImageA");
-    let executionB = executionImage(project, "executionImageB");
-    if (executionA === executionB) {
-      console.warn(`[project] executionImageA and executionImageB are identical for slug "${slug}". Using fallback for image B.`);
-      executionB = FALLBACK_IMAGE;
-    }
+    const executionA = images.executionA;
+    const executionB = images.executionB;
     console.info("[project] execution image A:", executionA);
     console.info("[project] execution image B:", executionB);
     setExecutionImage("projectExecutionImageA", executionA, `${project.title || "Project"} execution image A`);
@@ -256,6 +297,7 @@ async function renderSingleProject() {
 
     setText("projectQuote", `"${project.excerpt || project.subtitle}"`);
   } catch (_error) {
+    console.error(`[project] failed to render slug "${slug}".`, _error);
     setText("projectTitle", "Project unavailable");
     setText("projectSubtitle", "Unable to load project data right now.");
   }

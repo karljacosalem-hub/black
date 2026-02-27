@@ -2,12 +2,13 @@ import { getAllBlogs } from "./blogData.js";
 import { getAllProjects } from "./projectData.js";
 
 let contentIndexPromise;
-const FALLBACK_IMAGE = "/assets/images/fallback/default.jpg";
+const FALLBACK_IMAGE = "assets/images/fallback/default.webp";
 
 function normalizeImagePath(path) {
   const value = String(path || "").trim();
   if (!value) return FALLBACK_IMAGE;
-  return value.startsWith("/") ? value : `/${value}`;
+  if (/^https?:\/\//i.test(value) || value.startsWith("data:")) return value;
+  return value.replace(/^\/+/, "");
 }
 
 function normalizeTagList(value) {

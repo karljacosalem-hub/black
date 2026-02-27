@@ -1,226 +1,226 @@
 [
-    {
-        "slug":  "nova-capital-control-platform",
-        "title":  "Nova Capital Control Platform",
-        "subtitle":  "A high-clarity operating layer for a multi-market investment team moving from spreadsheet workflows to real-time portfolio control.",
-        "status":  "completed",
-        "industry":  "FinTech",
-        "year":  "2025",
-        "heroImage":  "assets/projects/nova-capital-hero.jpg",
-        "background":  [
-                           "Nova Capital had grown from a three-person fund into a distributed team managing public equities, private deals, and debt exposure across several regions. Their decision process still lived in disconnected spreadsheets, analyst notes, and static reports exported from different vendors. During weekly reviews, partners spent more time reconciling conflicting numbers than debating strategy. The business problem was not a lack of intelligence; it was a lack of shared operational truth. They needed a system that could surface the same baseline data to portfolio managers, finance leads, and compliance stakeholders without forcing each group into a separate interface language.",
-                           "The challenge was especially sensitive because credibility with limited partners depended on consistent communication. When one performance figure changed between meetings, confidence eroded quickly. Nova did not want a decorative dashboard. They needed an internal command surface that treated data lineage, audit traceability, and interpretation speed as equally important. Our brief focused on three outcomes: reduce reconciliation time before investment committees, make risk posture readable in under five minutes, and give leadership a narrative-ready output format for board and LP updates without manual reformatting."
-                       ],
-        "approach":  [
-                         {
-                             "title":  "Map Decision Moments Before Screen Design",
-                             "description":  "We started by documenting the actual decision moments that mattered: rebalancing thresholds, liquidity alerts, sector concentration reviews, and scenario planning before committee calls. Instead of designing pages first, we designed a sequence of decisions and built interface states around those moments. This kept the product grounded in business behavior rather than feature inventory. The resulting information architecture reduced duplicate modules and made each panel accountable to a specific operating question."
-                         },
-                         {
-                             "title":  "Build a Tiered Data Confidence Model",
-                             "description":  "Not all inputs carried equal reliability. We introduced a confidence layer with visible source tags, update timestamps, and reconciliation status chips at component level. Users could immediately distinguish verified feeds from pending analyst entries. This removed the hidden ambiguity that had previously produced meeting friction. By making trust levels explicit in the UI, teams made faster decisions with clearer risk awareness and fewer follow-up verification loops."
-                         },
-                         {
-                             "title":  "Create Editorial Reporting Outputs",
-                             "description":  "Nova needed to move from internal analysis to external communication without creating another formatting pipeline. We designed reusable report templates directly from live platform modules, with controlled language blocks for commentary and assumptions. This turned weekly narrative preparation from a manual document exercise into a guided publishing flow. Stakeholders could generate consistent updates while preserving enough flexibility for context, exceptions, and market interpretation."
-                         }
-                     ],
-        "execution":  [
-                          "We implemented the platform as a modular front-end system with a strict component taxonomy: signal cards, variance tables, timeline markers, and risk ladders. Each component shared a consistent spacing contract and metadata zone so dense financial content remained scan-friendly under pressure. Interaction design favored low-motion transitions, keyboard-first navigation, and state persistence across sessions. We also introduced progressive disclosure for complex models, allowing users to inspect details on demand without overwhelming top-level review views.",
-                          "On the engineering side, performance and governance were treated as product features. We optimized render paths for large datasets with staged loading and retained query context between modules to reduce repeat calls. An event log layer recorded parameter changes for compliance review, and export snapshots were versioned to preserve historical narrative integrity. The final system balanced responsiveness, auditability, and readability, enabling teams to move from fragmented analysis to coordinated action with far less operational drag."
-                      ],
-        "results":  {
-                        "summary":  "Within the first quarter, Nova reported materially faster committee preparation and a measurable drop in pre-meeting reconciliation work. Leadership adopted the platform as the single source for portfolio posture, and LP communication shifted from reactive clarification to proactive storytelling supported by stable, traceable figures.",
-                        "metrics":  [
-                                        "38% reduction in weekly reconciliation time",
-                                        "57% faster committee prep cycle",
-                                        "92% internal adoption within 8 weeks"
-                                    ]
-                    },
-        "id":  "project-01",
-        "excerpt":  "A high-clarity operating layer for a multi-market investment team moving from spreadsheet workflows to real-time portfolio control.",
-        "content":  [
-                        "Nova Capital had grown from a three-person fund into a distributed team managing public equities, private deals, and debt exposure across several regions. Their decision process still lived in disconnected spreadsheets, analyst notes, and static reports exported from different vendors. During weekly reviews, partners spent more time reconciling conflicting numbers than debating strategy. The business problem was not a lack of intelligence; it was a lack of shared operational truth. They needed a system that could surface the same baseline data to portfolio managers, finance leads, and compliance stakeholders without forcing each group into a separate interface language.",
-                        "The challenge was especially sensitive because credibility with limited partners depended on consistent communication. When one performance figure changed between meetings, confidence eroded quickly. Nova did not want a decorative dashboard. They needed an internal command surface that treated data lineage, audit traceability, and interpretation speed as equally important. Our brief focused on three outcomes: reduce reconciliation time before investment committees, make risk posture readable in under five minutes, and give leadership a narrative-ready output format for board and LP updates without manual reformatting.",
-                        "We implemented the platform as a modular front-end system with a strict component taxonomy: signal cards, variance tables, timeline markers, and risk ladders. Each component shared a consistent spacing contract and metadata zone so dense financial content remained scan-friendly under pressure. Interaction design favored low-motion transitions, keyboard-first navigation, and state persistence across sessions. We also introduced progressive disclosure for complex models, allowing users to inspect details on demand without overwhelming top-level review views.",
-                        "On the engineering side, performance and governance were treated as product features. We optimized render paths for large datasets with staged loading and retained query context between modules to reduce repeat calls. An event log layer recorded parameter changes for compliance review, and export snapshots were versioned to preserve historical narrative integrity. The final system balanced responsiveness, auditability, and readability, enabling teams to move from fragmented analysis to coordinated action with far less operational drag."
-                    ],
-        "image":  "/assets/images/projects/nova-capital.jpg",
-        "tags":  [
-                     "FinTech",
-                     "completed"
-                 ],
-        "category":  "FinTech",
-        "executionImageA":  "/assets/images/projects/nova-capital-a.jpg",
-        "executionImageB":  "/assets/images/projects/nova-capital-b.jpg",
-        "contextImage":  "/assets/images/projects/nova-capital-context.jpg"
+  {
+    "slug": "nova-capital-control-platform",
+    "title": "Nova Capital Control Platform",
+    "subtitle": "A high-clarity operating layer for a multi-market investment team moving from spreadsheet workflows to real-time portfolio control.",
+    "status": "completed",
+    "industry": "FinTech",
+    "year": "2025",
+    "heroImage": "assets/images/projects/nova-capital.webp",
+    "background": [
+      "Nova Capital had grown from a three-person fund into a distributed team managing public equities, private deals, and debt exposure across several regions. Their decision process still lived in disconnected spreadsheets, analyst notes, and static reports exported from different vendors. During weekly reviews, partners spent more time reconciling conflicting numbers than debating strategy. The business problem was not a lack of intelligence; it was a lack of shared operational truth. They needed a system that could surface the same baseline data to portfolio managers, finance leads, and compliance stakeholders without forcing each group into a separate interface language.",
+      "The challenge was especially sensitive because credibility with limited partners depended on consistent communication. When one performance figure changed between meetings, confidence eroded quickly. Nova did not want a decorative dashboard. They needed an internal command surface that treated data lineage, audit traceability, and interpretation speed as equally important. Our brief focused on three outcomes: reduce reconciliation time before investment committees, make risk posture readable in under five minutes, and give leadership a narrative-ready output format for board and LP updates without manual reformatting."
+    ],
+    "approach": [
+      {
+        "title": "Map Decision Moments Before Screen Design",
+        "description": "We started by documenting the actual decision moments that mattered: rebalancing thresholds, liquidity alerts, sector concentration reviews, and scenario planning before committee calls. Instead of designing pages first, we designed a sequence of decisions and built interface states around those moments. This kept the product grounded in business behavior rather than feature inventory. The resulting information architecture reduced duplicate modules and made each panel accountable to a specific operating question."
+      },
+      {
+        "title": "Build a Tiered Data Confidence Model",
+        "description": "Not all inputs carried equal reliability. We introduced a confidence layer with visible source tags, update timestamps, and reconciliation status chips at component level. Users could immediately distinguish verified feeds from pending analyst entries. This removed the hidden ambiguity that had previously produced meeting friction. By making trust levels explicit in the UI, teams made faster decisions with clearer risk awareness and fewer follow-up verification loops."
+      },
+      {
+        "title": "Create Editorial Reporting Outputs",
+        "description": "Nova needed to move from internal analysis to external communication without creating another formatting pipeline. We designed reusable report templates directly from live platform modules, with controlled language blocks for commentary and assumptions. This turned weekly narrative preparation from a manual document exercise into a guided publishing flow. Stakeholders could generate consistent updates while preserving enough flexibility for context, exceptions, and market interpretation."
+      }
+    ],
+    "execution": [
+      "We implemented the platform as a modular front-end system with a strict component taxonomy: signal cards, variance tables, timeline markers, and risk ladders. Each component shared a consistent spacing contract and metadata zone so dense financial content remained scan-friendly under pressure. Interaction design favored low-motion transitions, keyboard-first navigation, and state persistence across sessions. We also introduced progressive disclosure for complex models, allowing users to inspect details on demand without overwhelming top-level review views.",
+      "On the engineering side, performance and governance were treated as product features. We optimized render paths for large datasets with staged loading and retained query context between modules to reduce repeat calls. An event log layer recorded parameter changes for compliance review, and export snapshots were versioned to preserve historical narrative integrity. The final system balanced responsiveness, auditability, and readability, enabling teams to move from fragmented analysis to coordinated action with far less operational drag."
+    ],
+    "results": {
+      "summary": "Within the first quarter, Nova reported materially faster committee preparation and a measurable drop in pre-meeting reconciliation work. Leadership adopted the platform as the single source for portfolio posture, and LP communication shifted from reactive clarification to proactive storytelling supported by stable, traceable figures.",
+      "metrics": [
+        "38% reduction in weekly reconciliation time",
+        "57% faster committee prep cycle",
+        "92% internal adoption within 8 weeks"
+      ]
     },
-    {
-        "slug":  "aurum-estates-brand-platform",
-        "title":  "Aurum Estates Brand Platform",
-        "subtitle":  "A digital property experience that balances editorial sophistication with practical search, comparison, and conversion workflows.",
-        "status":  "completed",
-        "industry":  "Luxury Real Estate",
-        "year":  "2025",
-        "heroImage":  "assets/projects/aurum-estates-hero.jpg",
-        "background":  [
-                           "Aurum Estates represented premium residential developments in several coastal markets, but their digital presence looked like a catalog rather than a brand with point of view. Listings were technically available, yet buyers and brokers struggled to compare projects, understand neighborhood context, or trust that inventory data was current. Marketing campaigns generated attention, but the website failed to convert that attention into qualified inquiries. The business issue was a gap between brand positioning and user confidence: the visual language suggested exclusivity, while the interaction model felt generic and uncertain.",
-                           "The leadership team asked for a platform that could perform across two audiences with different intent. End buyers needed clear storytelling, neighborhood intelligence, and financing guidance. Broker partners needed fast access to inventory changes, downloadable assets, and schedule visibility. They wanted one system instead of separate microsites, and they needed content operations simple enough for internal teams to manage weekly updates. Our scope focused on restoring trust through data clarity, reducing inquiry friction, and building a scalable publishing structure for future launches."
-                       ],
-        "approach":  [
-                         {
-                             "title":  "Unify Narrative and Inventory Architecture",
-                             "description":  "We redesigned the platform around a dual-layer structure: editorial story surfaces and transactional inventory surfaces. Every development received a narrative spine with architecture details, neighborhood context, and lifestyle information, while inventory modules remained precise and operational. This avoided the common split where marketing pages and listing pages feel disconnected. Users could move from aspiration to specifics without losing orientation or confidence."
-                         },
-                         {
-                             "title":  "Design Broker-Grade Utility Without Clutter",
-                             "description":  "Broker workflows were integrated as first-class interactions rather than hidden tools. We introduced quick filters, status badges, unit comparison states, and downloadable packet shortcuts in a restrained visual system that still aligned with the premium brand tone. The interface prioritized speed and legibility, giving brokers utility they could trust while preserving the calm presentation expected by high-intent buyers and brand stakeholders."
-                         },
-                         {
-                             "title":  "Build a Controlled Publishing Framework",
-                             "description":  "To prevent quality drift, we created content modules with predefined hierarchy rules for headlines, specification blocks, and media captions. Editors could publish new developments and update inventory without breaking rhythm or layout consistency. This reduced production dependency on developers and improved release cadence. The framework also supported campaign-level landing pages using the same components, keeping paid traffic experiences aligned with the primary brand platform."
-                         }
-                     ],
-        "execution":  [
-                          "The system was implemented with reusable section and card components optimized for heavy media environments. Image handling used responsive sources and lazy-loading thresholds tuned for property galleries, while typography and spacing contracts were enforced through shared tokens. We added comparison states that persisted across session navigation, allowing users to evaluate multiple units without resetting filters. Motion was intentionally restrained to maintain an editorial feel and protect performance on mid-range mobile devices.",
-                          "Data synchronization between the CMS and listing backend was stabilized with scheduled validation checks and exception alerts for stale unit data. We introduced publish previews that mirrored production behavior, reducing content QA cycles and launch-day surprises. Form submissions were streamlined into role-specific pathways, routing end-buyer leads and broker requests with different metadata payloads. The resulting platform combined brand depth, operational reliability, and faster path-to-inquiry across both core audiences."
-                      ],
-        "results":  {
-                        "summary":  "Aurum transitioned from campaign-led traffic spikes to sustained high-intent engagement. The new platform improved inquiry quality, reduced broker friction, and gave the internal team a reliable publishing model for ongoing launches without eroding brand consistency.",
-                        "metrics":  [
-                                        "44% increase in qualified inquiry submissions",
-                                        "31% longer average session depth on development pages",
-                                        "52% faster listing update turnaround"
-                                    ]
-                    },
-        "id":  "project-02",
-        "excerpt":  "A digital property experience that balances editorial sophistication with practical search, comparison, and conversion workflows.",
-        "content":  [
-                        "Aurum Estates represented premium residential developments in several coastal markets, but their digital presence looked like a catalog rather than a brand with point of view. Listings were technically available, yet buyers and brokers struggled to compare projects, understand neighborhood context, or trust that inventory data was current. Marketing campaigns generated attention, but the website failed to convert that attention into qualified inquiries. The business issue was a gap between brand positioning and user confidence: the visual language suggested exclusivity, while the interaction model felt generic and uncertain.",
-                        "The leadership team asked for a platform that could perform across two audiences with different intent. End buyers needed clear storytelling, neighborhood intelligence, and financing guidance. Broker partners needed fast access to inventory changes, downloadable assets, and schedule visibility. They wanted one system instead of separate microsites, and they needed content operations simple enough for internal teams to manage weekly updates. Our scope focused on restoring trust through data clarity, reducing inquiry friction, and building a scalable publishing structure for future launches.",
-                        "The system was implemented with reusable section and card components optimized for heavy media environments. Image handling used responsive sources and lazy-loading thresholds tuned for property galleries, while typography and spacing contracts were enforced through shared tokens. We added comparison states that persisted across session navigation, allowing users to evaluate multiple units without resetting filters. Motion was intentionally restrained to maintain an editorial feel and protect performance on mid-range mobile devices.",
-                        "Data synchronization between the CMS and listing backend was stabilized with scheduled validation checks and exception alerts for stale unit data. We introduced publish previews that mirrored production behavior, reducing content QA cycles and launch-day surprises. Form submissions were streamlined into role-specific pathways, routing end-buyer leads and broker requests with different metadata payloads. The resulting platform combined brand depth, operational reliability, and faster path-to-inquiry across both core audiences."
-                    ],
-        "image":  "/assets/images/projects/aurum-estates.jpg",
-        "tags":  [
-                     "Luxury Real Estate",
-                     "completed"
-                 ],
-        "category":  "Luxury Real Estate",
-        "executionImageA":  "/assets/images/projects/aurum-estates-a.jpg",
-        "executionImageB":  "/assets/images/projects/aurum-estates-b.jpg",
-        "contextImage":  "/assets/images/projects/aurum-estates-context.jpg"
+    "id": "project-01",
+    "excerpt": "A high-clarity operating layer for a multi-market investment team moving from spreadsheet workflows to real-time portfolio control.",
+    "content": [
+      "Nova Capital had grown from a three-person fund into a distributed team managing public equities, private deals, and debt exposure across several regions. Their decision process still lived in disconnected spreadsheets, analyst notes, and static reports exported from different vendors. During weekly reviews, partners spent more time reconciling conflicting numbers than debating strategy. The business problem was not a lack of intelligence; it was a lack of shared operational truth. They needed a system that could surface the same baseline data to portfolio managers, finance leads, and compliance stakeholders without forcing each group into a separate interface language.",
+      "The challenge was especially sensitive because credibility with limited partners depended on consistent communication. When one performance figure changed between meetings, confidence eroded quickly. Nova did not want a decorative dashboard. They needed an internal command surface that treated data lineage, audit traceability, and interpretation speed as equally important. Our brief focused on three outcomes: reduce reconciliation time before investment committees, make risk posture readable in under five minutes, and give leadership a narrative-ready output format for board and LP updates without manual reformatting.",
+      "We implemented the platform as a modular front-end system with a strict component taxonomy: signal cards, variance tables, timeline markers, and risk ladders. Each component shared a consistent spacing contract and metadata zone so dense financial content remained scan-friendly under pressure. Interaction design favored low-motion transitions, keyboard-first navigation, and state persistence across sessions. We also introduced progressive disclosure for complex models, allowing users to inspect details on demand without overwhelming top-level review views.",
+      "On the engineering side, performance and governance were treated as product features. We optimized render paths for large datasets with staged loading and retained query context between modules to reduce repeat calls. An event log layer recorded parameter changes for compliance review, and export snapshots were versioned to preserve historical narrative integrity. The final system balanced responsiveness, auditability, and readability, enabling teams to move from fragmented analysis to coordinated action with far less operational drag."
+    ],
+    "image": "assets/images/projects/nova-capital.webp",
+    "tags": [
+      "FinTech",
+      "completed"
+    ],
+    "category": "FinTech",
+    "executionImageA": "assets/images/projects/nova-capital-a.webp",
+    "executionImageB": "assets/images/projects/nova-capital-b.webp",
+    "contextImage": "assets/images/projects/nova-capital-context.webp"
+  },
+  {
+    "slug": "aurum-estates-brand-platform",
+    "title": "Aurum Estates Brand Platform",
+    "subtitle": "A digital property experience that balances editorial sophistication with practical search, comparison, and conversion workflows.",
+    "status": "completed",
+    "industry": "Luxury Real Estate",
+    "year": "2025",
+    "heroImage": "assets/images/projects/aurum-estates.webp",
+    "background": [
+      "Aurum Estates represented premium residential developments in several coastal markets, but their digital presence looked like a catalog rather than a brand with point of view. Listings were technically available, yet buyers and brokers struggled to compare projects, understand neighborhood context, or trust that inventory data was current. Marketing campaigns generated attention, but the website failed to convert that attention into qualified inquiries. The business issue was a gap between brand positioning and user confidence: the visual language suggested exclusivity, while the interaction model felt generic and uncertain.",
+      "The leadership team asked for a platform that could perform across two audiences with different intent. End buyers needed clear storytelling, neighborhood intelligence, and financing guidance. Broker partners needed fast access to inventory changes, downloadable assets, and schedule visibility. They wanted one system instead of separate microsites, and they needed content operations simple enough for internal teams to manage weekly updates. Our scope focused on restoring trust through data clarity, reducing inquiry friction, and building a scalable publishing structure for future launches."
+    ],
+    "approach": [
+      {
+        "title": "Unify Narrative and Inventory Architecture",
+        "description": "We redesigned the platform around a dual-layer structure: editorial story surfaces and transactional inventory surfaces. Every development received a narrative spine with architecture details, neighborhood context, and lifestyle information, while inventory modules remained precise and operational. This avoided the common split where marketing pages and listing pages feel disconnected. Users could move from aspiration to specifics without losing orientation or confidence."
+      },
+      {
+        "title": "Design Broker-Grade Utility Without Clutter",
+        "description": "Broker workflows were integrated as first-class interactions rather than hidden tools. We introduced quick filters, status badges, unit comparison states, and downloadable packet shortcuts in a restrained visual system that still aligned with the premium brand tone. The interface prioritized speed and legibility, giving brokers utility they could trust while preserving the calm presentation expected by high-intent buyers and brand stakeholders."
+      },
+      {
+        "title": "Build a Controlled Publishing Framework",
+        "description": "To prevent quality drift, we created content modules with predefined hierarchy rules for headlines, specification blocks, and media captions. Editors could publish new developments and update inventory without breaking rhythm or layout consistency. This reduced production dependency on developers and improved release cadence. The framework also supported campaign-level landing pages using the same components, keeping paid traffic experiences aligned with the primary brand platform."
+      }
+    ],
+    "execution": [
+      "The system was implemented with reusable section and card components optimized for heavy media environments. Image handling used responsive sources and lazy-loading thresholds tuned for property galleries, while typography and spacing contracts were enforced through shared tokens. We added comparison states that persisted across session navigation, allowing users to evaluate multiple units without resetting filters. Motion was intentionally restrained to maintain an editorial feel and protect performance on mid-range mobile devices.",
+      "Data synchronization between the CMS and listing backend was stabilized with scheduled validation checks and exception alerts for stale unit data. We introduced publish previews that mirrored production behavior, reducing content QA cycles and launch-day surprises. Form submissions were streamlined into role-specific pathways, routing end-buyer leads and broker requests with different metadata payloads. The resulting platform combined brand depth, operational reliability, and faster path-to-inquiry across both core audiences."
+    ],
+    "results": {
+      "summary": "Aurum transitioned from campaign-led traffic spikes to sustained high-intent engagement. The new platform improved inquiry quality, reduced broker friction, and gave the internal team a reliable publishing model for ongoing launches without eroding brand consistency.",
+      "metrics": [
+        "44% increase in qualified inquiry submissions",
+        "31% longer average session depth on development pages",
+        "52% faster listing update turnaround"
+      ]
     },
-    {
-        "slug":  "signalforge-ai-analytics-suite",
-        "title":  "SignalForge AI Analytics Suite",
-        "subtitle":  "A product and marketing system that explains complex model behavior to operators, executives, and technical buyers in one coherent experience.",
-        "status":  "ongoing",
-        "industry":  "AI SaaS Analytics",
-        "year":  "2026",
-        "heroImage":  "assets/projects/signalforge-hero.jpg",
-        "background":  [
-                           "SignalForge built a powerful analytics engine for forecasting operational risk, but customer teams struggled to understand model decisions and confidence intervals. Product demos looked impressive, yet onboarding stalled once users encountered dense terminology and fragmented interface patterns between marketing claims and in-product workflows. The company was entering enterprise sales conversations where interpretability mattered as much as raw predictive performance. They needed a clearer product narrative and a more legible operational UI before scaling go-to-market efforts.",
-                           "The engagement covered both external and internal layers: a positioning refresh for technical and executive audiences, and an interface redesign for core workflows in model monitoring, alert triage, and scenario simulation. The business objective was to shorten time-to-trust during trial periods. Buyers had to see not only what the model predicted, but why confidence shifted and what action to take next. Our mandate was to reduce cognitive load without reducing technical honesty, preserving depth for advanced users while improving first-week comprehension."
-                       ],
-        "approach":  [
-                         {
-                             "title":  "Define an Explainability-First Interaction Model",
-                             "description":  "We reframed primary views around three user questions: what changed, why it changed, and what to do now. Every critical component included a confidence context zone, trend delta, and action recommendation pathway. This shifted the interface from static metric display to guided operational reasoning. New users could follow a clear chain of evidence, while expert users retained access to deeper model diagnostics when needed."
-                         },
-                         {
-                             "title":  "Align Product Language With Buyer Language",
-                             "description":  "Marketing and product terminology were unified through a shared lexicon and message hierarchy. We removed internal jargon from key conversion and onboarding points, replacing it with language tied to business outcomes and risk posture. In-product labels, tooltips, and documentation snippets were rewritten to match external narratives, reducing the handoff gap between sales promise and product experience."
-                         },
-                         {
-                             "title":  "Design for Multi-Role Visibility",
-                             "description":  "Enterprise accounts included analysts, operations managers, and executive sponsors with different depth needs. We introduced role-adaptive entry views: concise executive snapshots, operational action queues, and analyst-level detail states. This approach preserved one underlying system while preventing interface overload for non-technical stakeholders. It also improved meeting alignment because each role could reference the same model state through tailored but consistent views."
-                         }
-                     ],
-        "execution":  [
-                          "Execution combined front-end system design, content architecture, and onboarding flow instrumentation. We implemented modular dashboard primitives with strict metadata placement, ensuring confidence values, timestamps, and drift indicators were always visible in predictable locations. Scenario modeling tools were rebuilt with progressive controls to avoid exposing advanced parameters too early. Motion and interaction timing were tuned for continuity, not theatrics, so users could focus on signal interpretation under time pressure.",
-                          "On the technical side, we optimized render performance for long-running datasets and added event analytics to track comprehension points across trial journeys. Help content was embedded contextually rather than isolated in documentation, with short explainers tied to live model states. We also introduced reusable page templates for launch campaigns and feature announcements that mirrored product taxonomy. This created a continuous experience from first touch to active usage while preserving system coherence as the product roadmap expands."
-                      ],
-        "results":  {
-                        "summary":  "The work is currently in rollout, with early pilot accounts showing stronger onboarding completion and higher confidence in model interpretation during stakeholder reviews. SignalForge now has a clearer path to enterprise expansion supported by a unified narrative and a calmer, more explainable product surface.",
-                        "metrics":  [
-                                        "29% improvement in trial-to-activation progression",
-                                        "41% drop in first-month support tickets tied to model interpretation",
-                                        "3.2x increase in feature discovery across pilot cohorts"
-                                    ]
-                    },
-        "id":  "project-03",
-        "excerpt":  "A product and marketing system that explains complex model behavior to operators, executives, and technical buyers in one coherent experience.",
-        "content":  [
-                        "SignalForge built a powerful analytics engine for forecasting operational risk, but customer teams struggled to understand model decisions and confidence intervals. Product demos looked impressive, yet onboarding stalled once users encountered dense terminology and fragmented interface patterns between marketing claims and in-product workflows. The company was entering enterprise sales conversations where interpretability mattered as much as raw predictive performance. They needed a clearer product narrative and a more legible operational UI before scaling go-to-market efforts.",
-                        "The engagement covered both external and internal layers: a positioning refresh for technical and executive audiences, and an interface redesign for core workflows in model monitoring, alert triage, and scenario simulation. The business objective was to shorten time-to-trust during trial periods. Buyers had to see not only what the model predicted, but why confidence shifted and what action to take next. Our mandate was to reduce cognitive load without reducing technical honesty, preserving depth for advanced users while improving first-week comprehension.",
-                        "Execution combined front-end system design, content architecture, and onboarding flow instrumentation. We implemented modular dashboard primitives with strict metadata placement, ensuring confidence values, timestamps, and drift indicators were always visible in predictable locations. Scenario modeling tools were rebuilt with progressive controls to avoid exposing advanced parameters too early. Motion and interaction timing were tuned for continuity, not theatrics, so users could focus on signal interpretation under time pressure.",
-                        "On the technical side, we optimized render performance for long-running datasets and added event analytics to track comprehension points across trial journeys. Help content was embedded contextually rather than isolated in documentation, with short explainers tied to live model states. We also introduced reusable page templates for launch campaigns and feature announcements that mirrored product taxonomy. This created a continuous experience from first touch to active usage while preserving system coherence as the product roadmap expands."
-                    ],
-        "image":  "/assets/images/projects/signalforge.jpg",
-        "tags":  [
-                     "AI SaaS Analytics",
-                     "ongoing"
-                 ],
-        "category":  "AI SaaS Analytics",
-        "executionImageA":  "/assets/images/projects/signalforge-a.jpg",
-        "executionImageB":  "/assets/images/projects/signalforge-b.jpg",
-        "contextImage":  "/assets/images/projects/signalforge-context.jpg"
+    "id": "project-02",
+    "excerpt": "A digital property experience that balances editorial sophistication with practical search, comparison, and conversion workflows.",
+    "content": [
+      "Aurum Estates represented premium residential developments in several coastal markets, but their digital presence looked like a catalog rather than a brand with point of view. Listings were technically available, yet buyers and brokers struggled to compare projects, understand neighborhood context, or trust that inventory data was current. Marketing campaigns generated attention, but the website failed to convert that attention into qualified inquiries. The business issue was a gap between brand positioning and user confidence: the visual language suggested exclusivity, while the interaction model felt generic and uncertain.",
+      "The leadership team asked for a platform that could perform across two audiences with different intent. End buyers needed clear storytelling, neighborhood intelligence, and financing guidance. Broker partners needed fast access to inventory changes, downloadable assets, and schedule visibility. They wanted one system instead of separate microsites, and they needed content operations simple enough for internal teams to manage weekly updates. Our scope focused on restoring trust through data clarity, reducing inquiry friction, and building a scalable publishing structure for future launches.",
+      "The system was implemented with reusable section and card components optimized for heavy media environments. Image handling used responsive sources and lazy-loading thresholds tuned for property galleries, while typography and spacing contracts were enforced through shared tokens. We added comparison states that persisted across session navigation, allowing users to evaluate multiple units without resetting filters. Motion was intentionally restrained to maintain an editorial feel and protect performance on mid-range mobile devices.",
+      "Data synchronization between the CMS and listing backend was stabilized with scheduled validation checks and exception alerts for stale unit data. We introduced publish previews that mirrored production behavior, reducing content QA cycles and launch-day surprises. Form submissions were streamlined into role-specific pathways, routing end-buyer leads and broker requests with different metadata payloads. The resulting platform combined brand depth, operational reliability, and faster path-to-inquiry across both core audiences."
+    ],
+    "image": "assets/images/projects/aurum-estates.webp",
+    "tags": [
+      "Luxury Real Estate",
+      "completed"
+    ],
+    "category": "Luxury Real Estate",
+    "executionImageA": "assets/images/projects/aurum-estates-a.webp",
+    "executionImageB": "assets/images/projects/aurum-estates-b.webp",
+    "contextImage": "assets/images/projects/aurum-estates-context.webp"
+  },
+  {
+    "slug": "signalforge-ai-analytics-suite",
+    "title": "SignalForge AI Analytics Suite",
+    "subtitle": "A product and marketing system that explains complex model behavior to operators, executives, and technical buyers in one coherent experience.",
+    "status": "ongoing",
+    "industry": "AI SaaS Analytics",
+    "year": "2026",
+    "heroImage": "assets/images/projects/signalforge.webp",
+    "background": [
+      "SignalForge built a powerful analytics engine for forecasting operational risk, but customer teams struggled to understand model decisions and confidence intervals. Product demos looked impressive, yet onboarding stalled once users encountered dense terminology and fragmented interface patterns between marketing claims and in-product workflows. The company was entering enterprise sales conversations where interpretability mattered as much as raw predictive performance. They needed a clearer product narrative and a more legible operational UI before scaling go-to-market efforts.",
+      "The engagement covered both external and internal layers: a positioning refresh for technical and executive audiences, and an interface redesign for core workflows in model monitoring, alert triage, and scenario simulation. The business objective was to shorten time-to-trust during trial periods. Buyers had to see not only what the model predicted, but why confidence shifted and what action to take next. Our mandate was to reduce cognitive load without reducing technical honesty, preserving depth for advanced users while improving first-week comprehension."
+    ],
+    "approach": [
+      {
+        "title": "Define an Explainability-First Interaction Model",
+        "description": "We reframed primary views around three user questions: what changed, why it changed, and what to do now. Every critical component included a confidence context zone, trend delta, and action recommendation pathway. This shifted the interface from static metric display to guided operational reasoning. New users could follow a clear chain of evidence, while expert users retained access to deeper model diagnostics when needed."
+      },
+      {
+        "title": "Align Product Language With Buyer Language",
+        "description": "Marketing and product terminology were unified through a shared lexicon and message hierarchy. We removed internal jargon from key conversion and onboarding points, replacing it with language tied to business outcomes and risk posture. In-product labels, tooltips, and documentation snippets were rewritten to match external narratives, reducing the handoff gap between sales promise and product experience."
+      },
+      {
+        "title": "Design for Multi-Role Visibility",
+        "description": "Enterprise accounts included analysts, operations managers, and executive sponsors with different depth needs. We introduced role-adaptive entry views: concise executive snapshots, operational action queues, and analyst-level detail states. This approach preserved one underlying system while preventing interface overload for non-technical stakeholders. It also improved meeting alignment because each role could reference the same model state through tailored but consistent views."
+      }
+    ],
+    "execution": [
+      "Execution combined front-end system design, content architecture, and onboarding flow instrumentation. We implemented modular dashboard primitives with strict metadata placement, ensuring confidence values, timestamps, and drift indicators were always visible in predictable locations. Scenario modeling tools were rebuilt with progressive controls to avoid exposing advanced parameters too early. Motion and interaction timing were tuned for continuity, not theatrics, so users could focus on signal interpretation under time pressure.",
+      "On the technical side, we optimized render performance for long-running datasets and added event analytics to track comprehension points across trial journeys. Help content was embedded contextually rather than isolated in documentation, with short explainers tied to live model states. We also introduced reusable page templates for launch campaigns and feature announcements that mirrored product taxonomy. This created a continuous experience from first touch to active usage while preserving system coherence as the product roadmap expands."
+    ],
+    "results": {
+      "summary": "The work is currently in rollout, with early pilot accounts showing stronger onboarding completion and higher confidence in model interpretation during stakeholder reviews. SignalForge now has a clearer path to enterprise expansion supported by a unified narrative and a calmer, more explainable product surface.",
+      "metrics": [
+        "29% improvement in trial-to-activation progression",
+        "41% drop in first-month support tickets tied to model interpretation",
+        "3.2x increase in feature discovery across pilot cohorts"
+      ]
     },
-    {
-        "slug":  "monolith-atelier-digital-presence",
-        "title":  "Monolith Atelier Digital Presence",
-        "subtitle":  "A portfolio and client-conversion platform for a multidisciplinary creative studio balancing art direction, production, and commercial clarity.",
-        "status":  "completed",
-        "industry":  "Creative Digital Studio",
-        "year":  "2025",
-        "heroImage":  "assets/projects/monolith-atelier-hero.jpg",
-        "background":  [
-                           "Monolith Atelier had a strong reputation in motion and brand campaigns, but their website did not reflect the maturity of their work. Case studies were inconsistent, inquiry pathways were buried, and production capabilities were hard to compare across disciplines. Prospective clients often arrived through referrals, reviewed a few visuals, and then requested separate decks to understand scope and process. The business challenge was positioning clarity: the studio needed a digital presence that could communicate craft, capability, and operating model without requiring a manual sales narrative for every opportunity.",
-                           "The team wanted a platform that felt editorial and intentional while still functioning as a conversion system. Their audience ranged from brand directors to procurement teams, so the site had to support emotional resonance and practical evaluation in one flow. We focused on three goals: tighten story structure across case studies, make services and process legible for commercial conversations, and create a modular content system that the internal team could maintain as new work launched."
-                       ],
-        "approach":  [
-                         {
-                             "title":  "Rebuild Case Studies Around Decision Narratives",
-                             "description":  "Instead of chronological project dumps, we structured each case study around challenge, strategic direction, execution logic, and measurable outcomes. This gave clients a clearer view of how Monolith thinks, not just what they produce visually. Narrative modules were designed to hold both editorial storytelling and practical production notes, making each project page useful for inspiration and procurement review alike."
-                         },
-                         {
-                             "title":  "Clarify Capability Architecture",
-                             "description":  "Service offerings were reorganized into a capability framework tied to real engagement models: campaign systems, digital brand platforms, and content operations. Each capability page included scope boundaries, collaboration modes, and delivery artifacts so buyers could understand fit quickly. This reduced ambiguous lead conversations and improved the quality of first calls by setting expectations early and precisely."
-                         },
-                         {
-                             "title":  "Standardize Internal Publishing Workflows",
-                             "description":  "We created reusable templates for case entries, service pages, and editorial notes with strict spacing and hierarchy rules. The studio could publish new work without rebuilding layouts or improvising content structure. This improved consistency across the site and reduced turnaround time from final project delivery to public launch. The content model supports growth while protecting the visual voice and strategic clarity of the brand."
-                         }
-                     ],
-        "execution":  [
-                          "Implementation focused on a restrained component system where typography, rhythm, and image handling did most of the storytelling work. We introduced flexible media blocks for stills, short loops, and process artifacts, each with clear caption behavior and responsive performance safeguards. Navigation and filtering were simplified to minimize dead-end browsing. Users can move from featured work to relevant capabilities and inquiry entry points without losing narrative continuity.",
-                          "We also built a lightweight CRM handoff flow that tags inquiries by service intent, budget band, and timeline context, giving the studio a clearer pipeline view. Performance budgets were enforced to keep media-heavy pages within acceptable load windows, and a governance checklist was added for content publishing quality. The result is a platform that feels crafted but operational, supporting both brand perception and steady business development."
-                      ],
-        "results":  {
-                        "summary":  "Monolith now presents a more coherent market position and spends less time translating portfolio work in early sales conversations. The platform supports faster qualification, stronger storytelling, and a repeatable publishing cadence aligned with studio growth.",
-                        "metrics":  [
-                                        "36% increase in qualified inbound leads",
-                                        "48% reduction in manual pre-call deck requests",
-                                        "2.1x growth in average case study completion depth"
-                                    ]
-                    },
-        "id":  "project-04",
-        "excerpt":  "A portfolio and client-conversion platform for a multidisciplinary creative studio balancing art direction, production, and commercial clarity.",
-        "content":  [
-                        "Monolith Atelier had a strong reputation in motion and brand campaigns, but their website did not reflect the maturity of their work. Case studies were inconsistent, inquiry pathways were buried, and production capabilities were hard to compare across disciplines. Prospective clients often arrived through referrals, reviewed a few visuals, and then requested separate decks to understand scope and process. The business challenge was positioning clarity: the studio needed a digital presence that could communicate craft, capability, and operating model without requiring a manual sales narrative for every opportunity.",
-                        "The team wanted a platform that felt editorial and intentional while still functioning as a conversion system. Their audience ranged from brand directors to procurement teams, so the site had to support emotional resonance and practical evaluation in one flow. We focused on three goals: tighten story structure across case studies, make services and process legible for commercial conversations, and create a modular content system that the internal team could maintain as new work launched.",
-                        "Implementation focused on a restrained component system where typography, rhythm, and image handling did most of the storytelling work. We introduced flexible media blocks for stills, short loops, and process artifacts, each with clear caption behavior and responsive performance safeguards. Navigation and filtering were simplified to minimize dead-end browsing. Users can move from featured work to relevant capabilities and inquiry entry points without losing narrative continuity.",
-                        "We also built a lightweight CRM handoff flow that tags inquiries by service intent, budget band, and timeline context, giving the studio a clearer pipeline view. Performance budgets were enforced to keep media-heavy pages within acceptable load windows, and a governance checklist was added for content publishing quality. The result is a platform that feels crafted but operational, supporting both brand perception and steady business development."
-                    ],
-        "image":  "/assets/images/projects/monolith-atelier.jpg",
-        "tags":  [
-                     "Creative Digital Studio",
-                     "completed"
-                 ],
-        "category":  "Creative Digital Studio",
-        "executionImageA":  "/assets/images/projects/monolith-atelier-a.jpg",
-        "executionImageB":  "/assets/images/projects/monolith-atelier-b.jpg",
-        "contextImage":  "/assets/images/projects/monolith-atelier-context.jpg"
-    }
+    "id": "project-03",
+    "excerpt": "A product and marketing system that explains complex model behavior to operators, executives, and technical buyers in one coherent experience.",
+    "content": [
+      "SignalForge built a powerful analytics engine for forecasting operational risk, but customer teams struggled to understand model decisions and confidence intervals. Product demos looked impressive, yet onboarding stalled once users encountered dense terminology and fragmented interface patterns between marketing claims and in-product workflows. The company was entering enterprise sales conversations where interpretability mattered as much as raw predictive performance. They needed a clearer product narrative and a more legible operational UI before scaling go-to-market efforts.",
+      "The engagement covered both external and internal layers: a positioning refresh for technical and executive audiences, and an interface redesign for core workflows in model monitoring, alert triage, and scenario simulation. The business objective was to shorten time-to-trust during trial periods. Buyers had to see not only what the model predicted, but why confidence shifted and what action to take next. Our mandate was to reduce cognitive load without reducing technical honesty, preserving depth for advanced users while improving first-week comprehension.",
+      "Execution combined front-end system design, content architecture, and onboarding flow instrumentation. We implemented modular dashboard primitives with strict metadata placement, ensuring confidence values, timestamps, and drift indicators were always visible in predictable locations. Scenario modeling tools were rebuilt with progressive controls to avoid exposing advanced parameters too early. Motion and interaction timing were tuned for continuity, not theatrics, so users could focus on signal interpretation under time pressure.",
+      "On the technical side, we optimized render performance for long-running datasets and added event analytics to track comprehension points across trial journeys. Help content was embedded contextually rather than isolated in documentation, with short explainers tied to live model states. We also introduced reusable page templates for launch campaigns and feature announcements that mirrored product taxonomy. This created a continuous experience from first touch to active usage while preserving system coherence as the product roadmap expands."
+    ],
+    "image": "assets/images/projects/signalforge.webp",
+    "tags": [
+      "AI SaaS Analytics",
+      "ongoing"
+    ],
+    "category": "AI SaaS Analytics",
+    "executionImageA": "assets/images/projects/signalforge-a.webp",
+    "executionImageB": "assets/images/projects/signalforge-b.webp",
+    "contextImage": "assets/images/projects/signalforge-context.webp"
+  },
+  {
+    "slug": "monolith-atelier-digital-presence",
+    "title": "Monolith Atelier Digital Presence",
+    "subtitle": "A portfolio and client-conversion platform for a multidisciplinary creative studio balancing art direction, production, and commercial clarity.",
+    "status": "completed",
+    "industry": "Creative Digital Studio",
+    "year": "2025",
+    "heroImage": "assets/images/projects/monolith-atelier.webp",
+    "background": [
+      "Monolith Atelier had a strong reputation in motion and brand campaigns, but their website did not reflect the maturity of their work. Case studies were inconsistent, inquiry pathways were buried, and production capabilities were hard to compare across disciplines. Prospective clients often arrived through referrals, reviewed a few visuals, and then requested separate decks to understand scope and process. The business challenge was positioning clarity: the studio needed a digital presence that could communicate craft, capability, and operating model without requiring a manual sales narrative for every opportunity.",
+      "The team wanted a platform that felt editorial and intentional while still functioning as a conversion system. Their audience ranged from brand directors to procurement teams, so the site had to support emotional resonance and practical evaluation in one flow. We focused on three goals: tighten story structure across case studies, make services and process legible for commercial conversations, and create a modular content system that the internal team could maintain as new work launched."
+    ],
+    "approach": [
+      {
+        "title": "Rebuild Case Studies Around Decision Narratives",
+        "description": "Instead of chronological project dumps, we structured each case study around challenge, strategic direction, execution logic, and measurable outcomes. This gave clients a clearer view of how Monolith thinks, not just what they produce visually. Narrative modules were designed to hold both editorial storytelling and practical production notes, making each project page useful for inspiration and procurement review alike."
+      },
+      {
+        "title": "Clarify Capability Architecture",
+        "description": "Service offerings were reorganized into a capability framework tied to real engagement models: campaign systems, digital brand platforms, and content operations. Each capability page included scope boundaries, collaboration modes, and delivery artifacts so buyers could understand fit quickly. This reduced ambiguous lead conversations and improved the quality of first calls by setting expectations early and precisely."
+      },
+      {
+        "title": "Standardize Internal Publishing Workflows",
+        "description": "We created reusable templates for case entries, service pages, and editorial notes with strict spacing and hierarchy rules. The studio could publish new work without rebuilding layouts or improvising content structure. This improved consistency across the site and reduced turnaround time from final project delivery to public launch. The content model supports growth while protecting the visual voice and strategic clarity of the brand."
+      }
+    ],
+    "execution": [
+      "Implementation focused on a restrained component system where typography, rhythm, and image handling did most of the storytelling work. We introduced flexible media blocks for stills, short loops, and process artifacts, each with clear caption behavior and responsive performance safeguards. Navigation and filtering were simplified to minimize dead-end browsing. Users can move from featured work to relevant capabilities and inquiry entry points without losing narrative continuity.",
+      "We also built a lightweight CRM handoff flow that tags inquiries by service intent, budget band, and timeline context, giving the studio a clearer pipeline view. Performance budgets were enforced to keep media-heavy pages within acceptable load windows, and a governance checklist was added for content publishing quality. The result is a platform that feels crafted but operational, supporting both brand perception and steady business development."
+    ],
+    "results": {
+      "summary": "Monolith now presents a more coherent market position and spends less time translating portfolio work in early sales conversations. The platform supports faster qualification, stronger storytelling, and a repeatable publishing cadence aligned with studio growth.",
+      "metrics": [
+        "36% increase in qualified inbound leads",
+        "48% reduction in manual pre-call deck requests",
+        "2.1x growth in average case study completion depth"
+      ]
+    },
+    "id": "project-04",
+    "excerpt": "A portfolio and client-conversion platform for a multidisciplinary creative studio balancing art direction, production, and commercial clarity.",
+    "content": [
+      "Monolith Atelier had a strong reputation in motion and brand campaigns, but their website did not reflect the maturity of their work. Case studies were inconsistent, inquiry pathways were buried, and production capabilities were hard to compare across disciplines. Prospective clients often arrived through referrals, reviewed a few visuals, and then requested separate decks to understand scope and process. The business challenge was positioning clarity: the studio needed a digital presence that could communicate craft, capability, and operating model without requiring a manual sales narrative for every opportunity.",
+      "The team wanted a platform that felt editorial and intentional while still functioning as a conversion system. Their audience ranged from brand directors to procurement teams, so the site had to support emotional resonance and practical evaluation in one flow. We focused on three goals: tighten story structure across case studies, make services and process legible for commercial conversations, and create a modular content system that the internal team could maintain as new work launched.",
+      "Implementation focused on a restrained component system where typography, rhythm, and image handling did most of the storytelling work. We introduced flexible media blocks for stills, short loops, and process artifacts, each with clear caption behavior and responsive performance safeguards. Navigation and filtering were simplified to minimize dead-end browsing. Users can move from featured work to relevant capabilities and inquiry entry points without losing narrative continuity.",
+      "We also built a lightweight CRM handoff flow that tags inquiries by service intent, budget band, and timeline context, giving the studio a clearer pipeline view. Performance budgets were enforced to keep media-heavy pages within acceptable load windows, and a governance checklist was added for content publishing quality. The result is a platform that feels crafted but operational, supporting both brand perception and steady business development."
+    ],
+    "image": "assets/images/projects/monolith-atelier.webp",
+    "tags": [
+      "Creative Digital Studio",
+      "completed"
+    ],
+    "category": "Creative Digital Studio",
+    "executionImageA": "assets/images/projects/monolith-atelier-a.webp",
+    "executionImageB": "assets/images/projects/monolith-atelier-b.webp",
+    "contextImage": "assets/images/projects/monolith-atelier-context.webp"
+  }
 ]

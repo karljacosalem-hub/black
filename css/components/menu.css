@@ -1,11 +1,1 @@
-/* Menu structure */
-.fullscreen-menu {
-  position: relative;
-}
-
-@media (max-width: 1024px) {
-  .fullscreen-menu {
-    position: fixed;
-    inset: 0;
-  }
-}
+.fullscreen-menu{position:relative}@media (max-width:1024px){.fullscreen-menu{position:fixed;inset:0}}

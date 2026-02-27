@@ -8,11 +8,25 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/base.css" />
-  <link rel="stylesheet" href="css/layout.css" />
-  <link rel="stylesheet" href="css/components.css" />
-  <link rel="stylesheet" href="css/utilities.css" />
-  <link rel="stylesheet" href="css/themes.css" />
+  <style id="critical-css">
+:root{--font-sans:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text",sans-serif;--font-heading:"Poppins",sans-serif;--container:1160px;--transition-base:320ms cubic-bezier(.22,1,.36,1)}
+*{box-sizing:border-box}html{overflow-x:hidden}body{margin:0;overflow-x:hidden;font-family:var(--font-sans);text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+.container{width:min(100% - 2rem,var(--container));margin-inline:auto}
+.site-header{position:fixed;inset:0 0 auto;z-index:50}.header-inner{min-height:5rem;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:1.2rem}
+main{padding-top:5rem}h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);margin:0}p{margin:0}
+#home{position:relative;overflow:hidden}#home::before{content:"";position:absolute;inset:0;z-index:-2;background:url("assets/images/hero/home-hero.webp"),url("assets/images/fallback/default.webp");background-size:cover;background-position:center}#home::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(112deg,rgba(4,6,10,.72),rgba(4,6,10,.48) 46%,rgba(4,6,10,.66)),linear-gradient(180deg,rgba(0,0,0,.14),rgba(0,0,0,.54) 88%,rgba(0,0,0,.68))}
+[data-theme="light"] #home::after{background:linear-gradient(112deg,rgba(2,5,10,.84),rgba(2,5,10,.62) 46%,rgba(2,5,10,.8)),linear-gradient(180deg,rgba(0,0,0,.14),rgba(0,0,0,.54) 88%,rgba(0,0,0,.68))}
+</style>
+  <link rel="preload" href="css/base.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="css/base.css" /></noscript>
+  <link rel="preload" href="css/layout.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="css/layout.css" /></noscript>
+  <link rel="preload" href="css/components.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="css/components.css" /></noscript>
+  <link rel="preload" href="css/utilities.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="css/utilities.css" /></noscript>
+  <link rel="preload" href="css/themes.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="css/themes.css" /></noscript>
 </head>
 <body data-page="about">
   <div class="bg-layer" aria-hidden="true">
@@ -49,11 +63,11 @@
         </div>
         <figure class="about-visual about-portrait reveal">
           <img
-            src="assets/images/about/about-top.jpg"
+            src="assets/images/about/about-top.webp"
             alt="Conceptual portrait-style studio image"
             loading="lazy"
             decoding="async"
-            onerror="this.onerror=null;this.src='assets/images/fallback/default.jpg';" />
+            onerror="this.onerror=null;this.src='assets/images/fallback/default.webp';" />
         </figure>
       </div>
     </section>
@@ -150,11 +164,11 @@
         </div>
         <figure class="about-visual about-secondary reveal">
           <img
-            src="assets/images/about/about-secondary.jpg"
+            src="assets/images/about/about-secondary.webp"
             alt="Studio work environment"
             loading="lazy"
             decoding="async"
-            onerror="this.onerror=null;this.src='assets/images/fallback/default.jpg';" />
+            onerror="this.onerror=null;this.src='assets/images/fallback/default.webp';" />
         </figure>
       </div>
     </section>

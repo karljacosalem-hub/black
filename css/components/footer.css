@@ -1,12 +1,1 @@
-/* Footer structure */
-.footer-block {
-  display: grid;
-  gap: 1.5rem;
-}
-
-@media (max-width: 1024px) {
-  .footer-block {
-    grid-template-columns: 1fr;
-    justify-items: start;
-  }
-}
+.footer-block{display:grid;gap:1.5rem}@media (max-width:1024px){.footer-block{grid-template-columns:1fr;justify-items:start}}

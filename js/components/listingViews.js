@@ -102,7 +102,7 @@ function renderResultCard(item) {
   return `
     <article class="card project-card reveal">
       <figure class="project-thumb">
-        <img src="${escapeHtml(item.image || "/assets/images/fallback/default.jpg")}" alt="${escapeHtml(item.title || typeLabel)} card image" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='/assets/images/fallback/default.jpg';" />
+        <img src="${escapeHtml(item.image || "assets/images/fallback/default.webp")}" alt="${escapeHtml(item.title || typeLabel)} card image" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/images/fallback/default.webp';" />
       </figure>
       <span class="badge">${typeLabel}</span>
       <h3>${escapeHtml(item.title)}</h3>
