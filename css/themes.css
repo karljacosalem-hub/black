@@ -1,0 +1,63 @@
+﻿:root {
+  --bg: #07080c;
+  --bg-elevated: #0f1116;
+  --surface: #151923;
+  --text: #f4f6fb;
+  --text-muted: #a2a9ba;
+  --line: rgba(255, 255, 255, 0.12);
+  --line-strong: rgba(255, 255, 255, 0.28);
+  --accent: #8ea5ff;
+  --accent-2: #9ecff7;
+  --accent-soft: rgba(142, 165, 255, 0.18);
+  --text-on-accent: #111423;
+}
+
+[data-theme="light"] {
+  --bg: #f6f7fb;
+  --bg-elevated: #ffffff;
+  --surface: #f2f4fa;
+  --text: #141824;
+  --text-muted: #5c6372;
+  --line: rgba(22, 24, 33, 0.16);
+  --line-strong: rgba(22, 24, 33, 0.32);
+  --accent: #5b70d7;
+  --accent-2: #5ca7dc;
+  --accent-soft: rgba(91, 112, 215, 0.18);
+  --text-on-accent: #ffffff;
+}
+
+[data-theme="light"] .site-header.is-scrolled,
+[data-theme="light"] .site-header.search-active {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border-color: rgba(22, 24, 33, 0.14);
+  box-shadow: 0 10px 24px -20px rgba(30, 41, 59, 0.28);
+}
+
+[data-theme="light"] .metric-card,
+[data-theme="light"] .card,
+[data-theme="light"] .project-item,
+[data-theme="light"] .contact-form,
+[data-theme="light"] .cta-inner {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border-color: rgba(22, 24, 33, 0.14);
+  box-shadow: 0 10px 24px -22px rgba(30, 41, 59, 0.24);
+}
+
+@media (max-width: 1024px) {
+  [data-theme="light"] .header-main {
+    background: rgba(255, 255, 255, 0.58);
+    border-color: rgba(22, 24, 33, 0.16);
+    box-shadow: none;
+  }
+
+  [data-theme="light"] .header-main .search-shell .search-input {
+    background: rgba(255, 255, 255, 0.72);
+  }
+
+  [data-theme="light"] .mobile-menu-panel {
+    background: rgba(255, 255, 255, 0.68);
+    border-color: rgba(22, 24, 33, 0.16);
+  }
+}

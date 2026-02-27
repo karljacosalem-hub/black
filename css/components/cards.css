@@ -1,0 +1,40 @@
+/* Card components */
+.card-grid,
+.cards-grid,
+.projects-grid,
+.layout-grid,
+.layout-grid-projects {
+  gap: 1.4rem;
+}
+
+.project-card {
+  display: grid;
+  align-content: start;
+  gap: var(--space-3);
+}
+
+.project-card > .image-placeholder {
+  margin-bottom: var(--space-1);
+}
+
+.project-card > h3 {
+  margin-bottom: var(--space-1);
+}
+
+.project-card > p {
+  margin-bottom: 0;
+}
+
+@media (min-width: 760px) {
+  .card-grid,
+  .layout-grid,
+  .cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .layout-grid-projects,
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

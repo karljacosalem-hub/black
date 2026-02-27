@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Black editorial article" />
+  <title>Black | Blog Post</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/utilities.css" />
+  <link rel="stylesheet" href="css/themes.css" />
+  <style>
+    body[data-page="blog-post"] .blog-post-column {
+      width: min(100%, 48rem);
+      margin-inline: auto;
+    }
+
+    body[data-page="blog-post"] .blog-post-media {
+      width: min(100%, 58rem);
+      margin-inline: auto;
+    }
+
+    body[data-page="blog-post"] .blog-meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--space-2) var(--space-4);
+      padding-top: var(--space-2);
+    }
+
+    body[data-page="blog-post"] .blog-meta .metric-label {
+      margin: 0;
+    }
+
+    body[data-page="blog-post"] .meta-key {
+      display: inline-block;
+      margin-right: 0.45rem;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+    }
+
+    body[data-page="blog-post"] .blog-meta-tags {
+      grid-template-columns: 1fr;
+      gap: var(--space-2);
+    }
+
+    body[data-page="blog-post"] .blog-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    body[data-page="blog-post"] .blog-tag {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.18rem 0.56rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      background: color-mix(in oklab, var(--surface), transparent 18%);
+    }
+
+    body[data-page="blog-post"] .blog-share {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+      padding-top: var(--space-2);
+    }
+
+    body[data-page="blog-post"] .blog-share a {
+      color: var(--text-muted);
+      border-bottom: 1px solid color-mix(in oklab, var(--line), transparent 24%);
+      transition: color var(--transition-fast), border-color var(--transition-fast);
+    }
+
+    body[data-page="blog-post"] .blog-share a:hover {
+      color: var(--text);
+      border-color: var(--accent);
+    }
+
+    body[data-page="blog-post"] #blogBody {
+      width: min(100%, 48rem);
+      margin-inline: auto;
+      display: grid;
+      gap: var(--space-3);
+    }
+
+    body[data-page="blog-post"] #blogBody h3 {
+      margin-top: var(--space-4);
+    }
+
+    @media (max-width: 767px) {
+      body[data-page="blog-post"] .blog-meta {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body data-page="blog-post">
+  <div class="bg-layer" aria-hidden="true">
+    <span class="orb orb-a"></span>
+    <span class="orb orb-b"></span>
+    <span class="orb orb-c"></span>
+  </div>
+
+  <div class="theme-wash" id="themeWash" aria-hidden="true"></div>
+
+  <div class="cursor cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <div id="globalHeader"></div>
+
+  <main>
+    <section class="section-pad section-block tone-soft section-variant-soft" id="blog-post-hero">
+      <div class="container section-head section-header section-intro blog-post-column reveal">
+        <p class="eyebrow" id="blogPostCategory"></p>
+        <h1 class="hero-title" id="blogPostTitle"></h1>
+        <p class="lead" id="blogPostSubtitle"></p>
+        <div class="blog-meta" aria-label="Blog post metadata">
+          <p class="metric-label"><span class="meta-key">Author</span><span id="blogPostAuthor"></span></p>
+          <p class="metric-label"><span class="meta-key">Date</span><span id="blogPostDate"></span></p>
+          <p class="metric-label"><span class="meta-key">Reading Time</span><span id="blogPostReadingTime"></span></p>
+          <p class="metric-label"><span class="meta-key">Category</span><span id="blogPostCategoryMeta"></span></p>
+        </div>
+        <div class="blog-meta blog-meta-tags" aria-label="Blog post tags">
+          <p class="metric-label meta-key">Tags</p>
+          <div class="blog-tags" id="blogPostTags"></div>
+        </div>
+        <div class="blog-share" aria-label="Share article">
+          <a href="#" id="shareX" target="_blank" rel="noopener noreferrer">Share on X</a>
+          <a href="#" id="shareLinkedIn" target="_blank" rel="noopener noreferrer">Share on LinkedIn</a>
+        </div>
+      </div>
+      <div class="container section-content blog-post-media reveal">
+        <div id="blogPostHeroMedia" class="blog-hero-host" role="img" aria-label="Blog post hero image"></div>
+      </div>
+    </section>
+
+    <section class="section-pad section-block" id="blog-post-intro">
+      <div class="container section-head section-header section-intro blog-post-column reveal">
+        <p class="eyebrow">Introduction</p>
+        <h2 class="title-reveal">Context and framing.</h2>
+        <p class="lead" id="blogIntro"></p>
+      </div>
+    </section>
+
+    <section class="section-pad section-block" id="blog-post-content">
+      <div class="container section-head section-header section-intro blog-post-column reveal">
+        <p class="eyebrow">Main Content</p>
+        <h2 class="title-reveal">Core perspective and practical application.</h2>
+      </div>
+      <div class="container section-content reveal" id="blogBody"></div>
+    </section>
+
+    <section class="section-pad section-block tone-soft section-variant-soft" id="blog-insight">
+      <div class="container split split-layout layout-split reveal">
+        <div class="section-head section-header section-intro">
+          <p class="eyebrow">Supporting Insight</p>
+          <h2 class="title-reveal">A principle worth carrying forward.</h2>
+          <blockquote class="lead" id="blogPullQuote"></blockquote>
+        </div>
+        <div class="supporting-media-host" id="blogSupportingImage" role="img" aria-label="Supporting insight image placeholder"></div>
+      </div>
+    </section>
+
+    <section class="section-pad section-block tone-deep section-variant-dark" id="blog-closing">
+      <div class="container section-head section-header section-intro blog-post-column reveal">
+        <p class="eyebrow">Closing</p>
+        <h2 class="title-reveal">Practical next steps.</h2>
+        <p class="lead" id="blogClosing"></p>
+        <a href="blog.html" class="btn btn-primary">Back to Blog</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="globalFooter"></div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

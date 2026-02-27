@@ -1,0 +1,64 @@
+/* Structural section system */
+.section-block {
+  --section-content-gap: var(--space-5);
+  position: relative;
+}
+
+.section-header,
+.section-intro {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.section-block .section-header + .section-content,
+.section-block .section-intro + .section-content {
+  margin-top: var(--section-content-gap);
+}
+
+.section-block .section-content + .section-content {
+  margin-top: var(--space-4);
+}
+
+.section-block + .section-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: max(1rem, calc((100% - var(--container)) / 2));
+  right: max(1rem, calc((100% - var(--container)) / 2));
+  height: 1px;
+  background: color-mix(in oklab, var(--line), transparent 40%);
+  pointer-events: none;
+}
+
+.section-variant-soft {
+  background: color-mix(in oklab, var(--surface), transparent 96%);
+}
+
+.section-variant-glass {
+  background: linear-gradient(180deg, color-mix(in oklab, var(--surface), transparent 86%), color-mix(in oklab, var(--surface), transparent 94%));
+}
+
+.section-variant-dark {
+  background: color-mix(in oklab, var(--surface), transparent 90%);
+}
+
+.split-layout,
+.layout-split {
+  display: grid;
+}
+
+.card-grid,
+.layout-grid,
+.layout-grid-projects {
+  display: grid;
+}
+
+.metric-strip,
+.metrics-strip {
+  display: grid;
+}
+
+.counter {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}

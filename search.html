@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Search blogs and projects from Black." />
+  <title>Black | Search Results</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/utilities.css" />
+  <link rel="stylesheet" href="css/themes.css" />
+</head>
+<body data-page="search">
+  <div class="bg-layer" aria-hidden="true">
+    <span class="orb orb-a"></span>
+    <span class="orb orb-b"></span>
+    <span class="orb orb-c"></span>
+  </div>
+
+  <div class="theme-wash" id="themeWash" aria-hidden="true"></div>
+
+  <div class="cursor cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <div id="globalHeader"></div>
+
+  <main>
+    <section class="hero section-pad tone-soft section-block section-variant-soft" id="search-hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Search</p>
+          <h1 class="hero-title" id="listingTitle">Search Results</h1>
+          <p class="lead" id="listingSubtitle">Results for your query</p>
+          <p class="metric-label" id="listingCount">0 results</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad section-block" id="search-results">
+      <div class="container filter-row section-content reveal listing-filter" role="toolbar" aria-label="Result type filters">
+        <button class="chip is-active" data-listing-type="all" aria-pressed="true">All</button>
+        <button class="chip" data-listing-type="blog" aria-pressed="false">Blogs</button>
+        <button class="chip" data-listing-type="project" aria-pressed="false">Projects</button>
+      </div>
+
+      <div class="container cards-grid card-grid layout-grid section-content reveal" id="listingGrid"></div>
+
+      <div class="container section-content reveal listing-empty" id="listingEmpty" hidden>
+        <p class="lead">No results found.</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="globalFooter"></div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
+

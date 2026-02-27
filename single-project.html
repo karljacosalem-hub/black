@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Project detail template for Black." />
+  <title>Black | Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/utilities.css" />
+  <link rel="stylesheet" href="css/themes.css" />
+</head>
+<body data-page="single-project">
+  <div class="bg-layer" aria-hidden="true">
+    <span class="orb orb-a"></span>
+    <span class="orb orb-b"></span>
+    <span class="orb orb-c"></span>
+  </div>
+
+  <div class="theme-wash" id="themeWash" aria-hidden="true"></div>
+
+  <div class="cursor cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <div id="globalHeader"></div>
+
+  <main>
+    <!-- Section 1: Project Hero -->
+    <section class="section-pad section-block tone-soft section-variant-soft" id="project-hero">
+        <div class="container section-head section-header section-intro reveal">
+          <p class="eyebrow">Project Case Study</p>
+        <h1 class="hero-title" id="projectTitle"></h1>
+        <p class="lead" id="projectSubtitle"></p>
+        <p class="lead"><span class="badge" id="projectStatus"></span><span id="projectMeta"></span></p>
+      </div>
+      <div class="container section-content reveal">
+        <div id="projectHeroMedia" class="project-hero-host" role="img" aria-label="Project hero image"></div>
+      </div>
+    </section>
+
+    <!-- Section 2: Background & Context -->
+    <section class="section-pad section-block" id="project-context">
+      <div class="container split split-layout layout-split reveal">
+        <div class="section-head section-header section-intro">
+          <p class="eyebrow">Background & Context</p>
+          <h2 class="title-reveal">Business context and operating challenge.</h2>
+          <p class="lead" id="projectBackground1"></p>
+          <p class="lead" id="projectBackground2"></p>
+        </div>
+        <div class="context-media-host" id="projectContextImage" role="img" aria-label="Context image placeholder"></div>
+      </div>
+    </section>
+
+    <!-- Section 3: Approach & Process -->
+    <section class="section-pad section-block tone-soft section-variant-soft" id="project-process">
+      <div class="container section-head section-header section-intro reveal">
+        <p class="eyebrow">Approach & Process</p>
+        <h2 class="title-reveal">Structured delivery from discovery to release.</h2>
+      </div>
+      <div class="container cards-grid card-grid layout-grid section-content reveal" id="projectApproachGrid">
+        <p class="lead" data-project-fallback hidden>Project data is temporarily unavailable.</p>
+      </div>
+    </section>
+
+    <!-- Section 4: System & Execution -->
+    <section class="section-pad section-block" id="project-execution">
+      <div class="container split split-layout layout-split reveal">
+        <div class="section-head section-header section-intro">
+          <p class="eyebrow">System & Execution</p>
+          <h2 class="title-reveal">How the system was designed and implemented.</h2>
+          <p class="lead" id="projectExecution1"></p>
+          <p class="lead" id="projectExecution2"></p>
+        </div>
+        <div class="cards-grid card-grid layout-grid section-content">
+          <div class="execution-media-host" id="projectExecutionImageA" role="img" aria-label="Execution image placeholder 1"></div>
+          <div class="execution-media-host" id="projectExecutionImageB" role="img" aria-label="Execution image placeholder 2"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Results & Impact -->
+    <section class="section-pad section-block tone-deep section-variant-dark" id="project-results">
+      <div class="container section-head section-header section-intro reveal">
+        <p class="eyebrow">Results & Impact</p>
+        <h2 class="title-reveal">Measured outcomes after launch.</h2>
+        <p class="lead" id="projectResultsSummary"></p>
+      </div>
+      <div class="container metrics-strip metric-strip section-content reveal">
+        <article>
+          <p class="metric-value counter" id="metricValue1"></p>
+          <p class="metric-label" id="metricLabel1"></p>
+        </article>
+        <article>
+          <p class="metric-value counter" id="metricValue2"></p>
+          <p class="metric-label" id="metricLabel2"></p>
+        </article>
+        <article>
+          <p class="metric-value counter" id="metricValue3"></p>
+          <p class="metric-label" id="metricLabel3"></p>
+        </article>
+      </div>
+      <div class="container section-content reveal">
+        <blockquote class="lead" id="projectQuote"></blockquote>
+        <a href="projects.html" class="btn btn-primary">Back to Projects</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="globalFooter"></div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
