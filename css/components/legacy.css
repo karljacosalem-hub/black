@@ -765,12 +765,20 @@
 }
 
 #home {
+  position: relative;
   overflow: hidden;
+  --hero-text: #f2f6ff;
+  --hero-muted: rgba(228, 236, 248, 0.9);
+  --hero-overlay: linear-gradient(112deg, rgba(4, 6, 10, 0.72) 0%, rgba(4, 6, 10, 0.48) 46%, rgba(4, 6, 10, 0.66) 100%);
 }
 
 #home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
   background:
-    linear-gradient(112deg, rgba(4, 6, 10, 0.9) 0%, rgba(4, 6, 10, 0.64) 46%, rgba(4, 6, 10, 0.84) 100%),
     url("../../assets/images/hero/home-hero.jpg"),
     url("../../assets/images/fallback/default.jpg");
   background-size: cover;
@@ -783,7 +791,49 @@
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.16) 0%, rgba(0, 0, 0, 0.58) 88%, rgba(0, 0, 0, 0.74) 100%);
+  background:
+    var(--hero-overlay),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.14) 0%, rgba(0, 0, 0, 0.54) 88%, rgba(0, 0, 0, 0.68) 100%);
+}
+
+[data-theme="light"] #home {
+  --hero-overlay: linear-gradient(112deg, rgba(2, 5, 10, 0.84) 0%, rgba(2, 5, 10, 0.62) 46%, rgba(2, 5, 10, 0.8) 100%);
+}
+
+#home .hero-copy,
+#home .hero-title,
+#home .hero-copy .lead,
+#home .hero-copy .eyebrow,
+#home .hero-metrics .metric-value,
+#home .hero-metrics .metric-label {
+  color: var(--hero-text);
+}
+
+#home .hero-copy .lead,
+#home .hero-metrics .metric-label {
+  color: var(--hero-muted);
+}
+
+#home .btn-ghost,
+#home .btn-secondary {
+  color: var(--hero-text);
+  border-color: color-mix(in oklab, white, transparent 58%);
+  background: color-mix(in oklab, #05070b, transparent 44%);
+}
+
+#home .btn-ghost:hover,
+#home .btn-secondary:hover {
+  border-color: color-mix(in oklab, white, transparent 38%);
+  background: color-mix(in oklab, #05070b, transparent 28%);
+}
+
+#home .metric-card {
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklab, #090d14, transparent 14%),
+    color-mix(in oklab, #090d14, transparent 34%)
+  );
+  border-color: color-mix(in oklab, white, transparent 82%);
 }
 
 .about-visual {
